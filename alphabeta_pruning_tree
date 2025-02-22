@@ -1,0 +1,56 @@
+// Alpha-Beta Pruning
+digraph {
+	Node0 [label="Max [0]
+(alpha=-inf, beta=inf)"]
+	Node1 [label="Min [0]
+(alpha=-inf, beta=inf)"]
+	Node0 -> Node1
+	Node2 [label="Max [0]
+(alpha=-inf, beta=inf)"]
+	Node1 -> Node2
+	Node3 [label="Min [0]
+(alpha=-inf, beta=inf)"]
+	Node2 -> Node3
+	Node4 [label="Min [0]
+(alpha=-inf, beta=inf)
+Leaf" color=green]
+	Node5 [label="Min [1]
+(alpha=3, beta=inf)"]
+	Node2 -> Node5
+	Node6 [label="Min [1]
+(alpha=3, beta=inf)
+Leaf" color=green]
+	Node7 [label="Max [1]
+(alpha=-inf, beta=5)"]
+	Node1 -> Node7
+	Node8 [label="Min [2]
+(alpha=-inf, beta=5)"]
+	Node7 -> Node8
+	Node9 [label="Min [2]
+(alpha=-inf, beta=5)
+Leaf" color=green]
+	Node10 [label="Max [1]
+(alpha=6, beta=5)
+Pruned" color=red]
+	Node11 [label="Min [1]
+(alpha=5, beta=inf)"]
+	Node0 -> Node11
+	Node12 [label="Max [2]
+(alpha=5, beta=inf)"]
+	Node11 -> Node12
+	Node13 [label="Min [4]
+(alpha=5, beta=inf)"]
+	Node12 -> Node13
+	Node14 [label="Min [4]
+(alpha=5, beta=inf)
+Leaf" color=green]
+	Node15 [label="Min [5]
+(alpha=5, beta=inf)"]
+	Node12 -> Node15
+	Node16 [label="Min [5]
+(alpha=5, beta=inf)
+Leaf" color=green]
+	Node17 [label="Min [1]
+(alpha=5, beta=2)
+Pruned" color=red]
+}
